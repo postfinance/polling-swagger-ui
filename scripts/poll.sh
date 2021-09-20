@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 #
-# Periodically poll configuration from $POLL_URL.
+# Periodically ($POLL_INTERVAL_SECONDS) poll configuration from $POLL_URL.
 
-pollTimeoutSeconds=${POLL_INTERVAL-300}
+pollTimeoutSeconds=${POLL_INTERVAL_SECONDS:-300}
 
 while : ; do
-  echo "polling new configuration.."
+  echo "polling configuration.."
   curl -o /usr/share/nginx/html/swagger-config.json $POLL_URL
   nginx -s reload
   sleep $pollTimeoutSeconds

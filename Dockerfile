@@ -1,5 +1,5 @@
-FROM swaggerapi/swagger-ui
-MAINTAINER Timon Borter <bbortt.github.io>
+FROM swaggerapi/swagger-ui:v3.52.2
+MAINTAINER OpenSource PF <opensource@postfinance.ch>
 
 ENV CONFIG_URL /swagger-config.json
 CMD ["sh", "/entrypoint.sh"]
