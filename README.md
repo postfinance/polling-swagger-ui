@@ -21,6 +21,7 @@ You must set the following environment variables to run the Docker container:
 
 It optionally accepts the following arguments:
 
+* `CURL_ADDITIONAL_PARAMS`: Additional parameters for `curl`.
 * `POLL_INTERVAL_SECONDS`: The refresh interval in seconds.
     * Default is 300 (5 minutes).
 

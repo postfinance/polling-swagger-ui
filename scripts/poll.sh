@@ -6,7 +6,7 @@ pollTimeoutSeconds=${POLL_INTERVAL_SECONDS:-300}
 
 while : ; do
   echo "polling configuration.."
-  curl -o /usr/share/nginx/html/swagger-config.json $POLL_URL
+  curl -o /usr/share/nginx/html/swagger-config.json $CURL_ADDITIONAL_PARAMS $POLL_URL
   nginx -s reload
   sleep $pollTimeoutSeconds
 done
