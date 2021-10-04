@@ -19,10 +19,14 @@ You must set the following environment variables to run the Docker container:
 
 * `POLL_URL`: URL pointing towards a swagger configuration file (see [configuration / swagger](#swagger))
 
+### Advanced
+
 It optionally accepts the following arguments:
 
 * `POLL_INTERVAL_SECONDS`: The refresh interval in seconds.
     * Default is 300 (5 minutes).
+* `SWAGGER_ROOT`: The swagger root folder, if using custom nginx configuration.
+    * Default ist `/usr/share/nginx/html`.
 
 The default exposed port is 8080.
 
@@ -68,4 +72,4 @@ docker run \
 # License
 
 This project is licensed under the terms of
-the [MIT License](https://github.com/postfinance/polling-swagger-ui/blob/canary/LICENSE).
+the [MIT License](https://github.com/postfinance/polling-swagger-ui/blob/release/LICENSE).
