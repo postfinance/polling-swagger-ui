@@ -1,6 +1,10 @@
+# Developer Instructions
+
+Contents:
+
 * [Automatic Versioning](#automatic-versioning)
 
-# Automatic Versioning
+## Automatic Versioning
 
 The automatic versioning happens in the [build action](https://github.com/postfinance/polling-swagger-ui/actions)
 according to SemVer. It uses the [`docker/metadata-action`](https://github.com/docker/metadata-action#semver):
