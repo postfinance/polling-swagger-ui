@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Docker Metadata
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: postfinance/polling-swagger-ui
           tags: |
