@@ -4,7 +4,11 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    assignees:
+      - 'bbortt'
   - package-ecosystem: 'docker'
     directory: '/'
     schedule:
       interval: 'weekly'
+    assignees:
+      - 'bbortt'
