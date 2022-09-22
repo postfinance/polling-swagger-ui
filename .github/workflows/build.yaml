@@ -4,7 +4,7 @@ on:
     branches:
       - '**/*'
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,4 +29,17 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
       - name: Test
         run: |
-          docker run --rm ${{ steps.meta.outputs.tags }}
+          docker run \
+            --rm \
+            --name swagger-ui-test \
+            -p 8080:8080 \
+            -e POLL_INTERVAL_SECONDS=60 \
+            -e POLL_URL=https://raw.githubusercontent.com/bbortt/swagger-ui-demo/master/swagger-config.json \
+            ${{ steps.meta.outputs.tags }} & \
+          (
+            sleep 10 && \
+            if [[ $(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080) -ne 200 ]]; then
+              exit 1;
+            fi && \
+            docker container stop swagger-ui-test
+          )
