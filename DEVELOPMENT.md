@@ -27,12 +27,13 @@ the available types.
 
 ### `semantic-release`
 
-The pipeline uses [`semantic-release`](https://github.com/semantic-release/semantic-release/) internally. Take a look at
+The pipeline uses the npm package [`semantic-release`](https://github.com/semantic-release/semantic-release/)
+internally. Take a look at
 the [`release`-workflow](https://github.com/postfinance/polling-swagger-ui/blob/release/.github/workflows/release.yaml)
 or
-[the official documentation](https://github.com/semantic-release/github/) in order to get started.
+[the official documentation](https://github.com/semantic-release/github/) if you want to know more about it.
 
-An access token (`GITHUB_TOKEN`) with the following scope is required for `semantic-release` to work properly: `public_repo`
+Also, note that it uses the default `GITHUB_TOKEN` for interacting with GitHub.
 .
 
 ## Docker Tagging

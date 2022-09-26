@@ -8,8 +8,11 @@ Polling Swagger-UI
 
 * [Configuration](#configuration)
     * [Docker Container](#docker-container)
+    * [Node.js](#nodejs)
     * [Swagger](#swagger)
 * [Running the Container](#running-the-container)
+* [Contributing](#contributing)
+* [License](#license)
 
 # Configuration
 
@@ -68,6 +71,12 @@ docker run \
   -e POLL_URL=https://raw.githubusercontent.com/bbortt/swagger-ui-demo/master/swagger-config.json \
   postfinance/polling-swagger-ui:1.0.0
 ```
+
+# Contributing
+
+Contributors may find help in
+the [`DEVELOPMENT.md`](https://github.com/postfinance/polling-swagger-ui/blob/release/DEVELOPMENT.md). It contains
+useful resources on how to behave when contributing, so we can accept your pull-requests without big trouble 😉
 
 # License
 
