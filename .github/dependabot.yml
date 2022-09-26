@@ -12,3 +12,9 @@ updates:
       interval: 'weekly'
     assignees:
       - 'bbortt'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    assignees:
+      - 'bbortt'

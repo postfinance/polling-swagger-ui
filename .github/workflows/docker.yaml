@@ -1,13 +1,12 @@
-name: publish
+name: docker
 on:
+  pull_request:
   push:
     branches:
-      - release
     tags:
-      - 'v*'
 jobs:
-  release:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3

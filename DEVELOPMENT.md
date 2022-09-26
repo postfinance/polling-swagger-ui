@@ -3,10 +3,41 @@
 Contents:
 
 * [Automatic Versioning](#automatic-versioning)
+* [Docker Tagging](#docker-tagging)
 
 ## Automatic Versioning
 
-The automatic versioning happens in the [build action](https://github.com/postfinance/polling-swagger-ui/actions)
+You must follow [the conventional commit messages pattern](https://www.conventionalcommits.org/en/v1.0.0/) when
+contributing to this repository!
+
+> Conventional Commits: A specification for adding human and machine readable meaning to commit messages.
+
+The commit message should be structured as follows:
+
+```shell
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Consider reading [the summary](https://www.conventionalcommits.org/en/v1.0.0/#summary) if you don't know anything about
+the available types.
+
+### `semantic-release`
+
+The pipeline uses [`semantic-release`](https://github.com/semantic-release/semantic-release/) internally. Take a look at
+the [`release`-workflow](https://github.com/postfinance/polling-swagger-ui/blob/release/.github/workflows/release.yaml)
+or
+[the official documentation](https://github.com/semantic-release/github/) in order to get started.
+
+An access token (`GITHUB_TOKEN`) with the following scope is required for `semantic-release` to work properly: `public_repo`
+.
+
+## Docker Tagging
+
+Docker image tagging happens in the [build action](https://github.com/postfinance/polling-swagger-ui/actions)
 according to SemVer. It uses the [`docker/metadata-action`](https://github.com/docker/metadata-action#semver):
 
 | Event           | Ref                           | Docker Tags                         |
