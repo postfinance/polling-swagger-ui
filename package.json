@@ -1,0 +1,26 @@
+{
+  "name": "polling-swagger-ui",
+  "description": "A Swagger-UI which periodically polls configuration from an URL.",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/postfinance/polling-swagger-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postfinance/polling-swagger-ui/issues"
+  },
+  "homepage": "https://github.com/postfinance/polling-swagger-ui#readme",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "husky": "^8.0.1",
+    "semantic-release": "^19.0.5"
+  }
+}
