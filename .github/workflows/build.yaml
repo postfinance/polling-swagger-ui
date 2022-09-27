@@ -38,7 +38,10 @@ jobs:
             ${{ steps.meta.outputs.tags }} & \
           (
             sleep 10 && \
-            if [[ $(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080) -ne 200 ]]; then
+            if [[ $(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080/apis/pet-api.json) -ne 200 ]]; then
+              exit 1;
+            fi && \
+            if [[ $(curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080/apis/store-api.json) -ne 200 ]]; then
               exit 1;
             fi && \
             docker container stop swagger-ui-test
