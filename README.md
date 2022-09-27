@@ -69,7 +69,7 @@ docker run \
   -p 80:8080 \
   -e POLL_INTERVAL_SECONDS=60 \
   -e POLL_URL=https://raw.githubusercontent.com/bbortt/swagger-ui-demo/master/swagger-config.json \
-  postfinance/polling-swagger-ui:1.0.0
+  postfinance/polling-swagger-ui:$RELEASE_VERSION
 ```
 
 # Contributing
