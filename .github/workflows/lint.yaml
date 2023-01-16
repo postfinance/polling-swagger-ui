@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           cache: 'npm'
-          node-version: 16
+          node-version: 18
       - name: Fetch Release Information
         run: git fetch origin release
       - name: Install Dependencies
