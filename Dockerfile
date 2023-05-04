@@ -1,4 +1,4 @@
-FROM swaggerapi/swagger-ui:v4.18.2
+FROM swaggerapi/swagger-ui:v4.18.3
 MAINTAINER OpenSource PF <opensource@postfinance.ch>
 
 ENV CONFIG_URL /apis/swagger-config.json
